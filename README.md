@@ -10,3 +10,9 @@ TODO App
 # SU
  username - admin
  pass - djangoreact
+
+
+# Check Migrations -
+ - python3 manage.py makemigrations (Make Migration file)
+ - python3 manage.py sqlmigrate api 0001 (List all sql queries)
+ - python3 manage.py migrate (Actually run the db migrations)
