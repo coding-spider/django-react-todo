@@ -9,7 +9,7 @@ class TodoListItem(BaseModel):
         ('COMPLETED', 'COMPLETED')
     )
 
-    todoList = models.ForeignKey(TodoList, on_delete = models.PROTECT, db_column = 'fk_id_todo_list')
+    todoList = models.ForeignKey(TodoList, related_name = "todoListItems", on_delete = models.PROTECT, db_column = 'fk_id_todo_list')
     description = models.CharField(max_length = 255)
     status = models.CharField(max_length = 255, default = 'PENDING', choices = STATUSES)
 
